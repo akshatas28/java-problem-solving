@@ -12,5 +12,6 @@ public class Sum {
         System.out.println(((a * b) / (b - a))); // 16
         float c = ((a * b) / (b - a));
         System.out.println(c); // 16.0
+        System.out.println("sum class over");
     }
 }
