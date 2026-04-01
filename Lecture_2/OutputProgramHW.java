@@ -9,6 +9,6 @@ public class OutputProgramHW {
         System.out.print("Hello World\n");
         System.out.print("Hello World"); // if we use \n also: we get output: Hello World (and then next in next line)
                                          // Hello World
-        System.out.print("Hello World\n Lecture 2"); // post /n everything will print along with spaces
+        System.out.print("Hello World\n Lecture 2"); // post "/n" everything will print along with spaces
     }
 }
