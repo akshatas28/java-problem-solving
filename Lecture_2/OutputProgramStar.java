@@ -1,4 +1,5 @@
 public class OutputProgramStar {
+    // code for printing start patterns
     public static void main(String args[]) {
         // output program
         System.out.println("*");
