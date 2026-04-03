@@ -8,7 +8,7 @@ public class ForLoopSumUser {
 		Scanner sc = new Scanner(System.in);
 		int sum = 0;
 		System.out.println("Enter n value for sum");
-		int n = sc.nextInt(); // this will be further used in "for"" condition statement
+		int n = sc.nextInt(); // this will be further used in "for" condition statement
 		for (int i = 1; i <= n; i++) {
 			sum = i + sum;
 			// the n value will be vaildated in the condition
