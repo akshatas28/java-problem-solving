@@ -29,12 +29,13 @@ public class Calculator {
 				break;
 			}
 			case "div": {
-				int result = a / b;
+				int result = a / b; // here u can use if else loop to check if b is 0 and then proceed accordingly
 				System.out.println(result);
 				break;
 			}
 			case "mod": {
-				int result = a % b;
+				int result = a % b; // here also u can use if else loop to check if b is 0 and then proceed
+									// accordingly
 				System.out.println(result);
 				break;
 			}
