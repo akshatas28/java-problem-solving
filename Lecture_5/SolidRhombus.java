@@ -10,7 +10,7 @@ public class SolidRhombus {
 			// inner for loop
 			for (int j = 1; j <= m; j++) {
 
-				if ((i + j) <= 5 || (i + j) >= 10) {
+				if ((i + j) <= 5 || (i + j) > 10) {
 					System.out.print(" ");
 				} else
 					System.out.print("*");
