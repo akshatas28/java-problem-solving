@@ -1,6 +1,6 @@
 import java.util.*;
 
-//print inverted half pyramid rotated 180
+//print Palindrome
 public class PalindromicNumPyramid {
 	public static void main(String[] args) {
 		int n = 9;
