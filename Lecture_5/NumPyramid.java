@@ -1,6 +1,6 @@
 import java.util.*;
 
-//print inverted half pyramid rotated 180
+//print number pyramid
 public class NumPyramid {
 	public static void main(String[] args) {
 		int n = 5;
