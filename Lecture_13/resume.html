@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title>Akshata Saptasagar — Resume (Downloadable Word & PDF)</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    /* ----- RESUME STYLES (original, unchanged) ----- */
+    :root {
+      --navy: #0d1f3c;
+      --accent: #1a5276;
+      --gold: #c9a84c;
+      --light: #f7f9fc;
+      --text: #1c1c2e;
+      --muted: #5a6272;
+      --border: #dde3ed;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: #eef1f6;
+      color: var(--text);
+      font-size: 13px;
+      line-height: 1.6;
+      padding: 20px 0 40px;
+    }
+    /* toolbar (buttons) */
+    .toolbar {
+      max-width: 900px;
+      margin: 0 auto 15px auto;
+      text-align: right;
+      padding: 0 20px;
+      position: sticky;
+      top: 10px;
+      z-index: 100;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: white;
+      border: 1px solid var(--gold);
+      color: var(--navy);
+      padding: 6px 18px;
+      font-size: 12px;
+      font-weight: 600;
+      border-radius: 40px;
+      cursor: pointer;
+      margin-left: 12px;
+      transition: 0.2s;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+      font-family: 'DM Sans', sans-serif;
+      background: #ffffffdd;
+      backdrop-filter: blur(4px);
+    }
+    .btn-word {
+      background: #1e466e;
+      border-color: #1e466e;
+      color: white;
+    }
+    .btn-pdf {
+      background: #b22222;
+      border-color: #b22222;
+      color: white;
+    }
+    .btn:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 6px 14px rgba(0,0,0,0.1);
+    }
+    .page {
+      max-width: 900px;
+      margin: 0 auto;
+      background: white;
+      box-shadow: 0 8px 40px rgba(0,0,0,0.12);
+    }
+    /* HEADER */
+    .header {
+      background: var(--navy);
+      padding: 40px 48px 32px;
+      position: relative;
+      overflow: hidden;
+    }
+    .header::before {
+      content: '';
+      position: absolute;
+      top: -40px; right: -40px;
+      width: 220px; height: 220px;
+      border-radius: 50%;
+      border: 40px solid rgba(201,168,76,0.12);
+    }
+    .header::after {
+      content: '';
+      position: absolute;
+      bottom: -20px; left: 200px;
+      width: 120px; height: 120px;
+      border-radius: 50%;
+      border: 25px solid rgba(255,255,255,0.05);
+    }
+    .name {
+      font-family: 'Playfair Display', serif;
+      font-size: 32px;
+      color: white;
+      letter-spacing: 0.5px;
+      margin-bottom: 6px;
+    }
+    .title {
+      font-size: 12.5px;
+      color: var(--gold);
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 18px;
+    }
+    .contact-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      font-size: 12px;
+      color: rgba(255,255,255,0.75);
+    }
+    .contact-row a {
+      color: rgba(255,255,255,0.75);
+      text-decoration: none;
+    }
+    .contact-row a:hover { color: var(--gold); }
+    .contact-row span::before {
+      content: '·';
+      margin-right: 20px;
+      opacity: 0.4;
+    }
+    .contact-row span:first-child::before { display: none; }
+    .body {
+      display: grid;
+      grid-template-columns: 1fr 280px;
+      min-height: 100%;
+    }
+    .main { padding: 36px 40px 40px; border-right: 1px solid var(--border); }
+    .side { padding: 36px 30px 40px; background: var(--light); }
+    .section { margin-bottom: 28px; }
+    .section:last-child { margin-bottom: 0; }
+    .section-title {
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--accent);
+      border-bottom: 2px solid var(--gold);
+      padding-bottom: 5px;
+      margin-bottom: 14px;
+    }
+    .summary {
+      font-size: 13px;
+      color: var(--muted);
+      line-height: 1.75;
+      font-weight: 300;
+    }
+    .summary strong { color: var(--text); font-weight: 600; }
+    .job { margin-bottom: 22px; }
+    .job:last-child { margin-bottom: 0; }
+    .job-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 2px;
+    }
+    .company {
+      font-weight: 700;
+      font-size: 13.5px;
+      color: var(--navy);
+    }
+    .date {
+      font-size: 11px;
+      color: var(--muted);
+      font-weight: 500;
+      white-space: nowrap;
+      margin-left: 12px;
+      padding-top: 2px;
+    }
+    .role {
+      font-size: 12px;
+      color: var(--gold);
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      margin-bottom: 8px;
+    }
+    .bullets {
+      list-style: none;
+      padding: 0;
+    }
+    .bullets li {
+      padding-left: 14px;
+      position: relative;
+      margin-bottom: 6px;
+      font-size: 12.5px;
+      color: #2c3450;
+      line-height: 1.65;
+    }
+    .bullets li::before {
+      content: '▸';
+      position: absolute;
+      left: 0;
+      color: var(--gold);
+      font-size: 10px;
+      top: 3px;
+    }
+    .bullets li strong { color: var(--navy); font-weight: 600; }
+    .metric {
+      background: rgba(201,168,76,0.12);
+      color: var(--navy);
+      font-weight: 700;
+      padding: 1px 5px;
+      border-radius: 3px;
+      font-size: 11.5px;
+    }
+    .skill-group { margin-bottom: 18px; }
+    .skill-label {
+      font-size: 10px;
+      font-weight: 700;
+      color: var(--accent);
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      margin-bottom: 6px;
+    }
+    .skill-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px;
+    }
+    .tag {
+      background: white;
+      border: 1px solid var(--border);
+      color: var(--text);
+      padding: 3px 8px;
+      border-radius: 4px;
+      font-size: 11px;
+      font-weight: 500;
+    }
+    .tag.primary {
+      background: var(--navy);
+      color: white;
+      border-color: var(--navy);
+    }
+    .cert-item {
+      font-size: 11.5px;
+      color: var(--text);
+      margin-bottom: 7px;
+      padding-left: 12px;
+      position: relative;
+      line-height: 1.5;
+    }
+    .cert-item::before {
+      content: '✦';
+      position: absolute;
+      left: 0;
+      color: var(--gold);
+      font-size: 8px;
+      top: 3px;
+    }
+    .cert-item span {
+      display: block;
+      font-size: 10.5px;
+      color: var(--muted);
+    }
+    .ach-item {
+      font-size: 11.5px;
+      color: var(--text);
+      margin-bottom: 7px;
+      padding-left: 12px;
+      position: relative;
+      line-height: 1.5;
+      font-weight: 500;
+    }
+    .ach-item::before {
+      content: '🏆';
+      position: absolute;
+      left: -2px;
+      font-size: 10px;
+      top: 1px;
+    }
+    .edu-name { font-weight: 700; color: var(--navy); font-size: 12.5px; }
+    .edu-deg { font-size: 11.5px; color: var(--muted); margin-top: 2px; }
+    .edu-gpa {
+      display: inline-block;
+      margin-top: 4px;
+      background: var(--navy);
+      color: white;
+      font-size: 10.5px;
+      font-weight: 700;
+      padding: 2px 8px;
+      border-radius: 3px;
+    }
+    .proj { margin-bottom: 10px; }
+    .proj-name { font-weight: 700; font-size: 12px; color: var(--navy); }
+    .proj-stack { font-size: 10.5px; color: var(--gold); font-weight: 600; margin-bottom: 3px; }
+    .proj-desc { font-size: 11.5px; color: var(--muted); line-height: 1.5; }
+    
+    /* print / PDF styling: hide toolbar, keep resume perfect */
+    @media print {
+      body { background: white; margin: 0; padding: 0; }
+      .toolbar { display: none; }
+      .page { margin: 0; box-shadow: none; max-width: 100%; }
+      .header { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      .metric, .tag.primary, .edu-gpa { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- DOWNLOAD BUTTONS: Word & PDF (print) -->
+<div class="toolbar">
+  <button class="btn btn-word" id="downloadWordBtn">📄 Download as Word (.doc)</button>
+  <button class="btn btn-pdf" id="savePdfBtn">🖨️ Save as PDF (Print)</button>
+</div>
+
+<!-- RESUME CONTENT (exactly as original) -->
+<div class="page" id="resumeContainer">
+  <div class="header">
+    <div class="name">Akshata Sital Saptasagar</div>
+    <div class="title">DevOps Engineer &nbsp;·&nbsp; CI/CD Automation &nbsp;·&nbsp; Platform Reliability</div>
+    <div class="contact-row">
+      <span>+91 9518594050</span>
+      <span><a href="mailto:akshata.saptasagar@gmail.com">akshata.saptasagar@gmail.com</a></span>
+      <span><a href="https://in.linkedin.com/in/akshata-saptasagar-9318071ab" target="_blank">linkedin.com/in/akshata-saptasagar</a></span>
+      <span><a href="https://github.com/akshatas28" target="_blank">github.com/akshatas28</a></span>
+    </div>
+  </div>
+
+  <div class="body">
+    <div class="main">
+      <div class="section">
+        <div class="section-title">Profile</div>
+        <div class="summary">
+          Software Engineer with <strong>2+ years</strong> engineering and operating enterprise-scale API integration platforms across global production environments. Delivered <strong>40+ zero-downtime deployments in a single weekend</strong>, automated away <strong>40+ hours/month</strong> of operational toil, and reduced incident detection time by <strong>90%</strong>. Known for rapid mastery of new platforms — built and deployed a production-grade enterprise API independently within <strong>2 weeks of zero prior exposure</strong>. Currently advancing Java engineering and cloud infrastructure skills toward full-stack DevOps engineering.
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section-title">Experience</div>
+        <div class="job">
+          <div class="job-header">
+            <div class="company">Johnson Controls International PLC</div>
+            <div class="date">Jul 2023 – Present</div>
+          </div>
+          <div class="role">IT Analyst — DevOps &amp; Platform Reliability Engineer · Pune, India</div>
+          <ul class="bullets">
+            <li>Orchestrated <strong class="metric">40+ zero-downtime</strong> API deployments in a single 48-hour release window using Azure DevOps pipeline sequencing, environment staging, and automated validation gates — achieving <strong>100% deployment success rate</strong>.</li>
+            <li>Owned CI/CD delivery for <strong class="metric">300+ enterprise API integrations</strong>, managing 10–15 daily deployments (scaling to 30+ during peak cycles) while sustaining <strong>99.9% platform availability</strong>.</li>
+            <li>Designed a Splunk + Cribl observability stack with custom dashboards and alerting pipelines — cutting incident mean-time-to-detect (MTTD) from <strong class="metric">20+ min → under 2 min</strong>, a <strong>90% improvement</strong>.</li>
+            <li>Eliminated <strong class="metric">40+ hours/month</strong> of manual toil by automating pre-deployment environment setup, agent provisioning, and release validation through CI/CD pipeline enhancements.</li>
+            <li>Built Linux deployment infrastructure from the ground up: automated server provisioning, multi-environment agent configuration, and cron-based maintenance pipelines for disk cleanup, log rotation, and health checks.</li>
+            <li>Resolved a critical P1 incident causing <strong>100% user blockout</strong> — traced root cause through multi-layer environment analysis, applied security isolation controls, and restored full service within SLA; authored preventive runbook adopted by the team.</li>
+            <li>Architected and deployed <strong class="metric">30+ API Gateway flows</strong> for scalable, secure enterprise integrations across global business segments — owning the full API lifecycle from design through production monitoring.</li>
+            <li>Led code quality governance across the platform engineering team: enforced secure coding standards, eliminated hardcoded values across production flows, and trained senior engineers on review best practices — contributing to measurable year-over-year reliability improvement.</li>
+            <li>Prevented <strong class="metric">3+ platform outages</strong> through proactive capacity planning: developed a payload-based worker-allocation framework and delivered data-backed scaling recommendations to engineering leadership.</li>
+            <li>Drove enterprise platform migration from legacy middleware to <strong>Azure Integration Services</strong>, authoring the team's standardised deployment documentation and improving development productivity by <strong>~70%</strong>.</li>
+            <li>Participated in <strong>24/7 global on-call rotation</strong> (including weekends and early morning shifts): led P1/P2 triage with avg MTTR <strong>~30 minutes</strong>; ran blameless postmortems that drove iterative system improvements.</li>
+            <li>Managed end-to-end ITSM change lifecycle — INC, CR, SCTASK, RITM tickets — in alignment with release governance and deployment standards across global teams.</li>
+          </ul>
+        </div>
+
+        <div class="job">
+          <div class="job-header">
+            <div class="company">Johnson Controls International PLC</div>
+            <div class="date">Jan 2023 – Jul 2023</div>
+          </div>
+          <div class="role">IT Intern — Integration Engineering · Pune, India</div>
+          <ul class="bullets">
+            <li>Designed and deployed a production-grade enterprise integration API on MuleSoft Anypoint Platform within <strong class="metric">2 weeks of onboarding</strong> — zero prior platform exposure — reducing manual data retrieval effort by <strong>90%</strong>.</li>
+            <li>Architected <strong class="metric">23+ API Gateway flows</strong> for the EMEA business segment — one of the organisation's largest integration initiatives — meeting enterprise security, performance, and reliability standards.</li>
+            <li>Built internal platform visibility tooling consolidating monitoring data across integration systems, accelerating incident diagnosis and reducing mean time to recovery.</li>
+          </ul>
+        </div>
+
+        <div class="job">
+          <div class="job-header">
+            <div class="company">Luminaz Safety Glass Pvt. Ltd.</div>
+            <div class="date">Sep 2021 – Dec 2021</div>
+          </div>
+          <div class="role">Software Engineering Intern · India</div>
+          <ul class="bullets">
+            <li>Stabilised a live production cloud application by diagnosing recurring incidents and implementing platform enhancements — improving overall system uptime and release stability.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section-title">Projects &amp; Research</div>
+        <div class="proj">
+          <div class="proj-name">Lung Cancer Stage Classification</div>
+          <div class="proj-stack">Python · Machine Learning · AWS</div>
+          <div class="proj-desc">Trained a multi-class classifier on 2,000 CT scan images for lung cancer staging; applied feature engineering and model optimisation. Published across <strong>3 peer-reviewed research papers</strong>.</div>
+        </div>
+        <div class="proj">
+          <div class="proj-name">Smart Goggles — Assistive Vision Device</div>
+          <div class="proj-stack">Raspberry Pi · Python · OpenCV</div>
+          <div class="proj-desc">Built a wearable computer vision device with 7 accessibility features at <strong>30% lower cost</strong> than commercial alternatives. <strong>National Finalist — Smart India Hackathon 2022</strong> (Top 30 teams, India).</div>
+        </div>
+        <div class="proj">
+          <div class="proj-name">Blockchain-Secured Smart Tolling System</div>
+          <div class="proj-stack">IoT · Blockchain · Python</div>
+          <div class="proj-desc">Designed an IoT-blockchain toll solution reducing fraud risk by <strong>60%</strong>. Awarded <strong>$500 AUD</strong> — La Trobe Technology Infusion Grand Challenge 2022, Australia.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="side">
+      <div class="section">
+        <div class="section-title">Technical Skills</div>
+        <div class="skill-group">
+          <div class="skill-label">CI/CD &amp; DevOps</div>
+          <div class="skill-tags">
+            <span class="tag primary">Azure DevOps</span>
+            <span class="tag primary">CI/CD Pipelines</span>
+            <span class="tag">Git / GitHub</span>
+            <span class="tag">Release Management</span>
+            <span class="tag">Linux (Ubuntu)</span>
+            <span class="tag">Agent Infrastructure</span>
+            <span class="tag">Cron Automation</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <div class="skill-label">API &amp; Integration</div>
+          <div class="skill-tags">
+            <span class="tag primary">MuleSoft Anypoint</span>
+            <span class="tag primary">Axway API Gateway</span>
+            <span class="tag">Azure Integration Services</span>
+            <span class="tag">Logic Apps</span>
+            <span class="tag">Function Apps</span>
+            <span class="tag">REST APIs</span>
+            <span class="tag">Microservices</span>
+            <span class="tag">OAuth2 / JWT</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <div class="skill-label">Observability</div>
+          <div class="skill-tags">
+            <span class="tag primary">Splunk</span>
+            <span class="tag primary">Cribl</span>
+            <span class="tag">SLO / SLI Tracking</span>
+            <span class="tag">Incident Response</span>
+            <span class="tag">Postman</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <div class="skill-label">Languages</div>
+          <div class="skill-tags">
+            <span class="tag primary">Python</span>
+            <span class="tag primary">Java</span>
+            <span class="tag">SQL</span>
+            <span class="tag">JavaScript</span>
+            <span class="tag">C / C++</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <div class="skill-label">Cloud &amp; Databases</div>
+          <div class="skill-tags">
+            <span class="tag">Microsoft Azure</span>
+            <span class="tag">Oracle Cloud (OCI)</span>
+            <span class="tag">AWS (Fundamentals)</span>
+            <span class="tag">Oracle SQL</span>
+            <span class="tag">NoSQL</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <div class="skill-label">Practices</div>
+          <div class="skill-tags">
+            <span class="tag">Agile / SDLC</span>
+            <span class="tag">ITSM</span>
+            <span class="tag">On-Call Operations</span>
+            <span class="tag">API Lifecycle</span>
+            <span class="tag">Distributed Systems</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section-title">Education</div>
+        <div class="edu-name">Pimpri Chinchwad College of Engineering</div>
+        <div class="edu-deg">B.E. Information Technology<br>Honors in Data Science · 2023</div>
+        <div class="edu-gpa">CGPA 9.50 / 10</div>
+      </div>
+
+      <div class="section">
+        <div class="section-title">Certifications</div>
+        <div class="cert-item">MuleSoft Certified Developer — Level 1<span>Hands-on Anypoint Platform</span></div>
+        <div class="cert-item">OCI 2025 — Application Integration Professional<span>Oracle Cloud Infrastructure</span></div>
+        <div class="cert-item">OCI 2024 — Generative AI Certified Professional<span>Oracle Cloud Infrastructure</span></div>
+        <div class="cert-item">OCI 2025 — AI Foundations Associate<span>Oracle Cloud Infrastructure</span></div>
+        <div class="cert-item">Oracle Data Platform 2025 — Foundations Associate</div>
+        <div class="cert-item">Linux Foundation — Open Source, Linux &amp; Git</div>
+        <div class="cert-item">Google Networking Fundamentals</div>
+        <div class="cert-item" style="color:var(--muted);font-style:italic;font-size:11px;">+ 40 additional certifications across cloud, data science &amp; software engineering</div>
+      </div>
+
+      <div class="section">
+        <div class="section-title">Achievements</div>
+        <div class="ach-item" style="padding-left:18px;">Smart India Hackathon 2022<br><span style="font-weight:400;color:var(--muted);font-size:11px;">National Finalist — Top 30 teams, India</span></div>
+        <div class="ach-item" style="padding-left:18px;">La Trobe Grand Challenge 2022<br><span style="font-weight:400;color:var(--muted);font-size:11px;">$500 AUD Innovation Grant — Australia</span></div>
+        <div class="ach-item" style="padding-left:18px;">IEEE Xtreme 2020<br><span style="font-weight:400;color:var(--muted);font-size:11px;">Global Rank 866 / National Rank 146</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  (function() {
+    // Helper: returns full HTML string for Word (with toolbar hidden)
+    function getWordHtml() {
+      // clone the whole document structure relevant for resume
+      const originalPage = document.getElementById('resumeContainer');
+      const clonePage = originalPage.cloneNode(true);
+      // Build a complete HTML document for Word
+      const styles = document.querySelector('style').innerHTML;
+      const fontsLink = '<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">';
+      return `<!DOCTYPE html>
+      <html>
+      <head>
+        <meta charset="UTF-8">
+        <title>Akshata Saptasagar - Resume</title>
+        ${fontsLink}
+        <style>
+          /* exact same styles plus hide any toolbar on word version */
+          .toolbar, .btn, .download-toolbar { display: none !important; }
+          body {
+            background: white;
+            padding: 20px;
+            margin: 0 auto;
+            font-family: 'DM Sans', sans-serif;
+          }
+          .page { max-width: 900px; margin: 0 auto; background: white; box-shadow: none; }
+          ${styles}
+          @media print { body { margin:0; } }
+        </style>
+      </head>
+      <body>
+        ${clonePage.outerHTML}
+      </body>
+      </html>`;
+    }
+
+    // Word download
+    const wordBtn = document.getElementById('downloadWordBtn');
+    if (wordBtn) {
+      wordBtn.addEventListener('click', function(e) {
+        const fullHtml = getWordHtml();
+        const blob = new Blob([fullHtml], { type: 'application/msword' });
+        const link = document.createElement('a');
+        const url = URL.createObjectURL(blob);
+        link.href = url;
+        link.download = 'Akshata_Saptasagar_Resume.doc';
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+        URL.revokeObjectURL(url);
+      });
+    }
+
+    // PDF via print (supports "Save as PDF")
+    const pdfBtn = document.getElementById('savePdfBtn');
+    if (pdfBtn) {
+      pdfBtn.addEventListener('click', function() {
+        window.print();
+      });
+    }
+  })();
+</script>
+</body>
+</html>

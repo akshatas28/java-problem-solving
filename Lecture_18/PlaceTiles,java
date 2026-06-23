@@ -1,0 +1,26 @@
+import java.util.*;
+// lect 18 = recursion one shot advanced
+// place tiles of size 1*m in a floor of size n*m
+public class PlaceTiles {
+	//declare another function apart from main
+	public static int placeTiles (int n, int m){
+		if (n ==m){
+				return m;
+		}
+		if (n<m){
+				return 1;
+		}
+		int vertPlace = placeTiles(n-m,m);
+		int horPlace = placeTiles(n-1,m);
+		return vertPlace + horPlace;
+		 // its doing one step and then calling itself
+		// self call = recursion
+	}
+	
+	
+	public static void main(String[] args) {
+		int n= 4, m = 2;
+		int totalPaths = placeTiles(n,m);
+		System.out.println (totalPaths);
+	}
+}

@@ -20,7 +20,7 @@ public class ArraysFindInd2 {
 		int x = sc.nextInt();
 		// output
 		// arr.length defines size of arr
-		for (int i = 0; i < numers.length; i++) {
+		for (int i = 0; i < numbers.length; i++) {
 			if (numbers[i] == x) {
 				System.out.println("output is");
 				System.out.println(i);
