@@ -187,4 +187,4 @@ See [LICENSE](LICENSE) for details.
 
 ---
 
-> Code is the implementation. Problem solving is the skill.
+> Code is the implementation. Problem solving & Pattern recognition is the skill.
