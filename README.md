@@ -73,7 +73,7 @@ Focus areas include:
 
 ### 🧠 Data Structures
 
-Practice implementing and using data structures to understand how they work and when to use them.
+Practice recognising, implementing and using data structures to understand how they work and when to use them.
 
 Examples include:
 
